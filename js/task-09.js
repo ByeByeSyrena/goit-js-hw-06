@@ -13,7 +13,7 @@ function getColor(event) {
 
   const color = getRandomHexColor();
   colorText.textContent = `${color}`;
-  document.body.style.color = color;
+  document.body.style.backgroundColor = color;
 }
 
 console.dir(changeColor);

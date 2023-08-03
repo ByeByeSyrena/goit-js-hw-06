@@ -4,18 +4,17 @@ const dataAction = document.querySelector('[data-length="6"]');
 const number = dataAction.dataset.length;
 const thisIsNumber = Number(number);
 
-console.log(number);
-
 inputName.addEventListener("blur", checkValidation);
 
 
 function checkValidation(event) {
-    const password = [...inputName.value].length;
-    if (password === thisIsNumber) {
+    if (event.target.value.length === thisIsNumber) {
         inputName.classList.add("valid");
+        inputName.classList.remove("invalid");
     }
-    else if (password > thisIsNumber) {
+    else {
         inputName.classList.add("invalid");
+        inputName.classList.remove("valid");
     }
     return;
 }

@@ -8,13 +8,16 @@ const ingredients = [
 ];
 
 const ulEl = document.querySelector("#ingredients");
+const liArray = [];
 
 for (const ingredient of ingredients) {
 const liEl = document.createElement("li")
   liEl.textContent = ingredient;
   liEl.classList.toggle("item");
-  ulEl.appendChild(liEl);
+  liArray.push(liEl);
 };
+
+ulEl.append(...liArray);
 
 // Не мій варіант, я по відео робила
   

@@ -3,8 +3,6 @@ const form = document.querySelector(".login-form");
 
 form.addEventListener("submit", onSubmit);
 
-console.dir(form);
-
 function onSubmit(event) {
 
     event.preventDefault();
@@ -14,7 +12,7 @@ const password = event.currentTarget.elements.password;
 const object = {};  
     
     if (email.value === '' || password.value === '') {
-        alert("All fields must be fullfilled");
+       return alert("All fields must be fullfilled");
     }
     else {
         object.email = email.value;
